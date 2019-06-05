@@ -1,7 +1,14 @@
 import 'package:angular/angular.dart';
+import 'package:StanfordAngNLP/src/component/stanfordlogo/stanfordlogo.dart';
+import 'package:angular_components/material_input/material_input.dart';
+import 'package:angular_components/material_input/material_input_multiline.dart';
 
 @Component(
   selector: 'homepage',
-  template: '<h3>Homepage Placeholder</h3>',
+  templateUrl: 'homepage.html',
+  directives: [
+    StanfordLogoComponent,
+    MaterialMultilineInputComponent
+  ]
 )
 class HomepageComponent {}
