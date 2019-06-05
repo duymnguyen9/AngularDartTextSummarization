@@ -40,6 +40,13 @@ p {
   }
 }
 
+.card-input-size{
+  display:block;
+  width: 100%;
+  margin: auto;
+  font-size: 1vw;
+}
+
 .block-width {
   display: block;
   width: $mat-grid * 40;
