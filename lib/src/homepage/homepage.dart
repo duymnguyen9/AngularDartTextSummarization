@@ -4,6 +4,7 @@ import 'package:angular_components/material_input/material_input.dart';
 import 'package:angular_components/material_input/material_input_multiline.dart';
 import 'package:angular_components/angular_components.dart';
 import 'package:skawa_material_components/card/card.dart';
+import 'package:angular_components/material_icon/material_icon.dart';
 
 @Component(
   selector: 'homepage',
@@ -12,11 +13,16 @@ import 'package:skawa_material_components/card/card.dart';
     StanfordLogoComponent,
     MaterialMultilineInputComponent,
     skawaCardDirectives,
-
+    MaterialButtonComponent, MaterialIconComponent,
+    materialInputDirectives
   ],
   styleUrls: [
     'homepage.scss.css'
   ],
   providers: const <dynamic>[materialProviders],
 )
-class HomepageComponent {}
+class HomepageComponent {
+  String boundText = '';
+
+  
+}

@@ -1,9 +1,8 @@
 @import 'package:angular_components/css/material/material';
+@import 'package:angular_components/material_input/mixins';
 
-material-button {
-  background: $mat-blue;
-  color: $mat-white;
-}
+
+
 
 p {
   margin: 0;
@@ -27,29 +26,31 @@ p {
   line-height: $mat-font-size-headline;
 }
 
-.fill-width {
-  align-items: baseline;
-  border: 1px solid $mat-transparent-black;
-  display: flex;
-  padding: $mat-grid;
-  width: $mat-grid * 100;
 
-  material-input {
-    flex-grow: 1;
-    margin-left: $mat-grid;
-  }
-}
 
 .card-input-size{
   display:block;
   width: 100%;
-  margin: auto;
-  font-size: 1vw;
+  padding-left: 1vmin;
+  padding-right: 1vmin;
+  font-size: 16px;
+  line-height: 26px;
+  color: #616161;
 }
+
 
 .block-width {
   display: block;
   width: $mat-grid * 40;
+}
+
+material-input {
+  &.darkgrey {
+    @include input-label-color(#616161);
+  }
+  &.nounderline{
+    @include material-input-no-underline()
+  }
 }
 
 [tooltipTarget] {
@@ -60,5 +61,36 @@ p {
   &:hover,
   &:focus {
     color: $mat-blue-700;
+  }
+}
+
+:host {
+  .color--primary-action {
+    color: #006CB8;
+    font-weight: 500;
+  }
+  .color--primary-reset {
+    color: #e98300;
+    font-weight: 500;
+  }
+
+  skawa-card {
+    margin-bottom: 50px;
+  }
+  material-button {
+    font-size: 24px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  skawa-card-actions{
+    background-color: hsl(0,0%, 95%);
+  }
+  skawa-card-header{
+    padding-left:2vmin;
+    padding-top: 2vmin;
+  }
+  .icon-format{
+    padding-left: 5px;
+    padding-right: 10px;
   }
 }

@@ -4,18 +4,34 @@
 
 <section>
     <skawa-card>
-        <skawa-card-header statusColor="rgb(0,127,0)">
-            <skawa-header-title>Essay Analysis</skawa-header-title>
+        <skawa-card-header statusColor="rgb(140,21,21)">
+            <skawa-header-title>Essay Analysis: </skawa-header-title>
         </skawa-card-header>
         <skawa-card-content>
-            <material-input class="card-input-size"
+            <material-input class="card-input-size darkgrey nounderline"
                             multiline
                             rows="10"
                             type="text"
-                            label="Please Input Text Here">
+                            label="Please Input Text Here"
+                            blurUpdate [(ngModel)]="boundText">
             </material-input>
         </skawa-card-content>
+        <skawa-card-actions align-right>
+            <material-button class="color--primary-reset">
+                <material-icon class="icon-format" icon="refresh"></material-icon>
+                Reset
+            </material-button>
+            <material-button class="color--primary-action">
+                <material-icon class="icon-format" icon="check"></material-icon>
+                Submit
+            </material-button>
+        </skawa-card-actions>
     </skawa-card>
 
+</section>
 
+<section>
+    <p>
+        {{boundText}}
+    </p>
 </section>
