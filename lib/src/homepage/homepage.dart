@@ -24,5 +24,5 @@ import 'package:angular_components/material_icon/material_icon.dart';
 class HomepageComponent {
   String boundText = '';
 
-  
+
 }

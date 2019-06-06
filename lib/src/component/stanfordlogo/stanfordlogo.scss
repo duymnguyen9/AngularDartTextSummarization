@@ -1,33 +1,29 @@
 :host {
 
   #universityITWidget{
-    display:block;
-    float: left;
-    font-size: 3vh;
+    display:inline;
+    font-size: 3vmax;
     padding-left: 1.5%;
-    padding-top: 1vh;
+    padding-top: 1vmax;
   }
   #universityITWidgetText{
     font-family: 'Source Sans Pro', sans-serif;
   }
 
-  #stanfordLogoWidget{
-    height: 4vh;
-    padding: 0;
-    margin: 0;
-    border-right: 1px solid #2E2D29;
+  #stanfordLogoDiv{
     display:inline;
-    float: left;
-
   }
+
+  #stanfordLogoWidget{
+    height: 4vmax;
+    border-right: 1px solid #2E2D29;
+  }
+
+
   #container-block-widget
   {
-    width:100%;
-    height: 4vh;
-    margin: auto;
-    margin-bottom: 3vh;
-    display: flex;
-    justify-content: center
+    text-align: center;
+    margin-bottom: 50px;
   }
 
 }

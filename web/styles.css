@@ -9,3 +9,89 @@ body {
 * {
   font-family: 'Source Sans Pro', sans-serif;
 }
+#spinner {
+  margin: 50px auto;
+  width: 200px;
+  height: 120px;
+  text-align: center;
+  font-size: 40px;
+  display: block;
+}
+
+#spinner > div {
+  background-color: #8c1515;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+
+  -webkit-animation: sk-stretchdelay 1.1s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+#spinner .rect2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+#spinner .rect3 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+#spinner .rect4 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+#spinner .rect5 {
+  -webkit-animation-delay: -0.7s;
+  animation-delay: -0.7s;
+}
+#spinner .rect6 {
+  -webkit-animation-delay: -0.6s;
+  animation-delay: -0.6s;
+}
+#spinner .rect7 {
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% {
+       transform: scaleY(1.0);
+       -webkit-transform: scaleY(1.0);
+     }
+}
+
+#universityITWidget{
+  display:inline;
+  font-size: 3vmax;
+  padding-left: 1.5%;
+  padding-top: 1vmax;
+}
+#universityITWidgetText{
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#stanfordLogoDiv{
+  display:inline;
+}
+
+#stanfordLogoWidget{
+  height: 4vmax;
+  border-right: 1px solid #2E2D29;
+}
+
+
+#container-block-widget
+{
+  text-align: center
+}
