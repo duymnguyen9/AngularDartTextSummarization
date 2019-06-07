@@ -3,8 +3,8 @@
 
 
 <section>
-    <skawa-card>
-        <skawa-card-header statusColor="rgb(140,21,21)">
+    <skawa-card id="card-input-main">
+        <skawa-card-header statusColor="rgb(140,21,21)" id="card-input-header">
             <skawa-header-title>Essay Analysis: </skawa-header-title>
         </skawa-card-header>
         <skawa-card-content>
@@ -16,13 +16,13 @@
                             blurUpdate [(ngModel)]="boundText">
             </material-input>
         </skawa-card-content>
-        <skawa-card-actions align-right>
-            <material-button class="color--primary-reset">
+        <skawa-card-actions align-right id="card-input-actions">
+            <material-button class="color--primary-reset" (click)="clearText">
                 <material-icon class="icon-format" icon="refresh"></material-icon>
-                Reset
+                Clear
             </material-button>
-            <material-button class="color--primary-action">
-                <material-icon class="icon-format" icon="check"></material-icon>
+            <material-button class="color--primary-action" (click)="submitText">
+                <material-icon class="icon-format" icon="check" ></material-icon>
                 Submit
             </material-button>
         </skawa-card-actions>
@@ -31,7 +31,27 @@
 </section>
 
 <section>
+    <skawa-card id="error-card" *ngIf="errorMessage">
+        <skawa-card-header id="error-card-message-header">
+            <div id="error-card-icon-div">
+                <material-icon id="error-message-icon" icon="clear"></material-icon>
+            </div>
+            <div id="error-card-text-content">
+                <skawa-header-title id="error-message-title">Submit Failed !</skawa-header-title>
+                <skawa-header-subhead id="error-message-sub">Either the text was empty or not long enough!</skawa-header-subhead>
+            </div>
+        </skawa-card-header>
+    </skawa-card>
+</section>
+
+
+
+<section>
     <p>
         {{boundText}}
     </p>
+</section>
+
+<section>
+    <h4> Result</h4>
 </section>

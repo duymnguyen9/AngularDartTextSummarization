@@ -4,10 +4,13 @@
 body {
   margin: 0 auto;
   padding: 5vw;
+  background-color: hsl(0,0%, 97%);
 }
 
 * {
   font-family: 'Source Sans Pro', sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+
 }
 #spinner {
   margin: 50px auto;
