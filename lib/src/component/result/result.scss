@@ -1,0 +1,20 @@
+@import 'package:angular_components/css/material/material';
+@import 'package:angular_components/material_chips/mixins';
+
+:host{
+  .result-card-text{
+    font-size: 16px;
+    color: hsl(0, 0%, 20%);
+    margin: 0.5%
+  }
+  hr{
+    margin:20px;
+  }
+
+  .clickable {
+    @include material-chips-clickable();
+    @include material-chip-font-size(18px);
+    @include material-chip-padding(5px);
+  }
+
+}

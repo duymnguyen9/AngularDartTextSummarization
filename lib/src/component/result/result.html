@@ -1,0 +1,23 @@
+<section>
+    <skawa-card>
+        <skawa-card-header statusColor="rgb(0,152,219)">
+            <skawa-header-title>Result: </skawa-header-title>
+        </skawa-card-header>
+        <skawa-card-content>
+            <p class="result-card-text">{{textResult.summary}}</p>
+
+            <hr>
+
+            <section>
+                <material-chips class="clickable">
+                    <material-chip *ngFor="let c of listOfChips()"
+                                   emphasis [removable]="false"
+                                   [value]="c"
+                                   displayNameRenderer></material-chip>
+
+                </material-chips>
+            </section>
+        </skawa-card-content>
+    </skawa-card>
+
+</section>

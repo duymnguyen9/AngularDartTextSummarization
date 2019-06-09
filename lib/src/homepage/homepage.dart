@@ -6,15 +6,11 @@ import 'package:angular_components/angular_components.dart';
 import 'package:skawa_material_components/card/card.dart';
 import 'package:angular_components/material_icon/material_icon.dart';
 
-import 'package:angular_components/auto_dismiss/auto_dismiss.dart';
-import 'package:angular_components/laminate/components/modal/modal.dart';
-import 'package:angular_components/laminate/overlay/module.dart';
-
-
 import 'package:StanfordAngNLP/src/service/text_result.dart';
 import 'package:StanfordAngNLP/src/service/text_result_service.dart';
 import 'dart:async';
-import 'dart:convert';
+
+import 'package:StanfordAngNLP/src/component/result/result.dart';
 
 
 
@@ -28,6 +24,8 @@ import 'dart:convert';
     MaterialButtonComponent, MaterialIconComponent,
     materialInputDirectives,
     coreDirectives,
+    NgClass,
+    ResultComponent,
   ],
   styleUrls: [
     'homepage.scss.css'
@@ -43,12 +41,15 @@ class HomepageComponent {
   String boundText = '';
   //Error Message
   bool errorMessage = false;
+  bool isResult = false;
+  bool isLoading = false;
 
   void clearText(){
     boundText = '';
   }
 
   void submitText(){
+    errorMessage = false;
     if(boundText.length<50){
       errorMessage = true;
     }
@@ -58,7 +59,11 @@ class HomepageComponent {
   }
 
   Future<void> getResult() async{
+    isLoading = true;
     textResult = await _textResultService.createPost('http://127.0.0.1:5000/textsubmit', boundText);
+    isLoading = false;
+    isResult = true;
+    print(textResult.keywords);
   }
   //TODO GET THE RESULT AND DISPLAY IT
 
