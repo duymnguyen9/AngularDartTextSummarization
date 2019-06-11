@@ -9,6 +9,7 @@ import 'package:angular_components/material_chips/material_chips.dart';
 
 
 
+
 @Component(
   selector: 'result-page',
   templateUrl: 'result.html',
@@ -20,14 +21,42 @@ import 'package:angular_components/material_chips/material_chips.dart';
     NgClass,
     MaterialChipComponent,
     MaterialChipsComponent,
-    displayNameRendererDirective
+    displayNameRendererDirective,
+    MaterialExpansionPanel,
+    MaterialExpansionPanelSet,
+    MaterialExpansionPanelAutoDismiss,
+    MaterialButtonComponent,
+    MaterialIconComponent,
+    MaterialYesNoButtonsComponent,
+    MaterialMultilineInputComponent,
+    materialInputDirectives,
+    skawaCardDirectives,
+    SkawaCardComponent
+
+
+
   ],
   providers:  [materialProviders, ClassProvider(TextResultService)],
 )
 
 class ResultComponent{
+  ResultComponent(this._textResultService);
+
   @Input()
   TextResult textResult;
+  @Input()
+  String originalText;
+
+
+  bool isCustomToolBeltPanelExpanded = false;
+  bool editModeStatus = false;
+  String editText;
+  bool errorMessage = false;
+  bool isLoading = false;
+
+  TextResultService _textResultService;
+
+
 
   List<Chip> listOfChips(){
     List<Chip> _listOfChips = [];
@@ -36,6 +65,37 @@ class ResultComponent{
   }
     return _listOfChips;
   }
+
+  void clearEditMode(){
+    editText = '';
+  }
+  void cancelEditMode(){
+    editModeStatus = false;
+  }
+  void editMode(){
+    editText = originalText;
+    editModeStatus = true;
+  }
+  void submitText(){
+    print(editText);
+    errorMessage = false;
+    if(editText.length<50){
+      errorMessage = true;
+    }
+    else{
+      getResult();
+    }
+  }
+
+  Future<void> getResult() async{
+    isCustomToolBeltPanelExpanded = false;
+    isLoading = true;
+    textResult = await _textResultService.createPost('http://127.0.0.1:5000/textsubmit', editText);
+    originalText = textResult.summary;
+    editModeStatus = false;
+    isLoading = false;
+  }
+
 
 
 

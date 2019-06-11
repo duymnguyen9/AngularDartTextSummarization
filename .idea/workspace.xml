@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b6b02e7-2179-4d24-9453-765346c1b1ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/src/component/result/result.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/component/result/result.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/component/result/result.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/component/result/result.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/component/result/result.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/component/result/result.html" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/component/result/result.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/component/result/result.scss" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/component/result/result.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/homepage/homepage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/homepage/homepage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/homepage/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/homepage/homepage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/homepage/homepage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/homepage/homepage.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/service/text_result_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/service/text_result_service.dart" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,11 +20,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/src/homepage/homepage.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/src/component/result/result.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1512">
-              <caret line="56" selection-start-line="56" selection-end-line="56" />
+            <state relative-caret-position="222">
+              <caret line="75" column="51" selection-start-line="75" selection-start-column="51" selection-end-line="75" selection-end-column="51" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#section#0;n#skawa-card-content#1;n#skawa-card#0;n#section#2;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -35,38 +35,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/src/component/result/result.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+            <state relative-caret-position="262">
+              <caret line="206" column="22" selection-start-line="206" selection-start-column="22" selection-end-line="206" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/src/homepage/homepage.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="954">
-              <caret line="189" column="22" selection-start-line="189" selection-start-column="22" selection-end-line="189" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/app_component.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/src/component/result/result.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="695">
-              <caret line="29" column="24" lean-forward="true" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+            <state relative-caret-position="417">
+              <caret line="54" column="24" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -94,6 +73,11 @@
       <find>shake</find>
       <find>host</find>
       <find>hsl</find>
+      <find>24</find>
+      <find>height</find>
+      <find>darkgrey</find>
+      <find>icon</find>
+      <find>header-requestContent</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -117,21 +101,21 @@
         <option value="$PROJECT_DIR$/lib/src/service/submissiontextservice.dart" />
         <option value="$PROJECT_DIR$/lib/src/model/text_result.dart" />
         <option value="$PROJECT_DIR$/lib/src/service/submission_text_service.dart" />
-        <option value="$PROJECT_DIR$/lib/src/homepage/homepage.html" />
-        <option value="$PROJECT_DIR$/lib/src/homepage/homepage.scss" />
         <option value="$PROJECT_DIR$/lib/src/service/text_result_service.dart" />
+        <option value="$PROJECT_DIR$/lib/src/homepage/homepage.scss" />
+        <option value="$PROJECT_DIR$/lib/src/homepage/homepage.html" />
         <option value="$PROJECT_DIR$/lib/src/homepage/homepage.dart" />
-        <option value="$PROJECT_DIR$/lib/src/component/result/result.dart" />
         <option value="$PROJECT_DIR$/lib/src/component/result/result.html" />
         <option value="$PROJECT_DIR$/lib/src/component/result/result.scss" />
+        <option value="$PROJECT_DIR$/lib/src/component/result/result.dart" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="702" />
-    <option name="y" value="124" />
-    <option name="width" value="1440" />
-    <option name="height" value="877" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1179" />
+    <option name="y" value="23" />
+    <option name="width" value="1522" />
+    <option name="height" value="1410" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -141,6 +125,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -171,14 +156,6 @@
               <item name="StanfordAngNLP" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="component" type="462c0819:PsiDirectoryNode" />
-              <item name="result" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StanfordAngNLP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StanfordAngNLP" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="homepage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -197,7 +174,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -257,11 +233,13 @@
       <workItem from="1559768288542" duration="16507000" />
       <workItem from="1559864227575" duration="7204000" />
       <workItem from="1559943046347" duration="12796000" />
+      <workItem from="1560122466745" duration="23000" />
+      <workItem from="1560186788366" duration="21142000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57450000" />
+    <option name="totallyTimeSpent" value="78615000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -273,10 +251,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
+    <frame x="1179" y="23" width="1522" height="1410" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15990548" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21452366" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -286,13 +264,13 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32925898" />
-      <window_info anchor="bottom" id="Dart Analysis" order="7" weight="0.32865584" />
+      <window_info anchor="bottom" id="Dart Analysis" order="7" weight="0.32795697" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32925898" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32925898" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32925898" />
-      <window_info active="true" anchor="bottom" id="Dart Webdev" order="13" visible="true" weight="0.17060561" />
+      <window_info anchor="bottom" id="Dart Webdev" order="13" visible="true" weight="0.17127496" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -408,50 +386,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/src/homepage/homepage.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="954">
-          <caret line="189" column="22" selection-start-line="189" selection-start-column="22" selection-end-line="189" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/app_component.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/src/homepage/homepage.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="938">
-          <caret line="65" column="31" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/src/component/result/result.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="695">
-          <caret line="29" column="24" lean-forward="true" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/src/component/result/result.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/src/service/text_result_service.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="567">
@@ -469,17 +403,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/src/component/result/result.html">
+    <entry file="file://$PROJECT_DIR$/lib/app_component.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="378">
+          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/homepage/homepage.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="201" lean-forward="true" selection-start-line="201" selection-end-line="201" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/homepage/homepage.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1242">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/src/homepage/homepage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1512">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
+        <state relative-caret-position="128">
+          <caret line="29" column="64" selection-start-line="29" selection-start-column="57" selection-end-line="29" selection-end-column="64" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#skawa-card-content#0;n#skawa-card#0;n#section#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/component/result/result.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="75" column="51" selection-start-line="75" selection-start-column="51" selection-end-line="75" selection-end-column="51" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#section#0;n#skawa-card-content#1;n#skawa-card#0;n#section#2;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/component/result/result.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="206" column="22" selection-start-line="206" selection-start-column="22" selection-end-line="206" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/component/result/result.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="54" column="24" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

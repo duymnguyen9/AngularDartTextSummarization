@@ -3,7 +3,7 @@
 
 
 <section *ngIf="isResult == false">
-    <skawa-card id="card-input-main" [ngClass]="{'invalid':errorMessage}">
+    <skawa-card id="card-input-main" [ngClass]="{'invalid': errorMessage}">
         <skawa-card-header statusColor="rgb(140,21,21)" id="card-input-header">
             <skawa-header-title>Essay Analysis: </skawa-header-title>
         </skawa-card-header>
@@ -56,4 +56,4 @@
 
 
 
-<result-page *ngIf="isResult" [textResult] = "textResult"></result-page>
+<result-page *ngIf="isResult" [textResult] = "textResult" [originalText] = "boundText"></result-page>

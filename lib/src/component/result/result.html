@@ -1,9 +1,79 @@
+<section id="requestContent">
+    <material-expansionpanel-set>
+        <material-expansionpanel wide
+                                 autoDismissable
+                                 value="All conversions"
+                                 class = "custom-request-expansion-panel"
+                                 id = "submitted-text-panel"
+                                 [ngClass]="{'invalid': errorMessage}"
+                                 [showSaveCancel]="false"
+                                 [expanded]="isCustomToolBeltPanelExpanded"
+                                 (expandedChange)="isCustomToolBeltPanelExpanded = $event"
+                                 >
+            <div name >
+                <p class = "header-requestContent" [ngClass]="{'invalid': errorMessage}">Submitted Text</p>
+                <p class = "subhead-requestContent" *ngIf="isCustomToolBeltPanelExpanded== false">click for more info</p>
+            </div>
+
+
+
+            <material-input class="card-input-size darkgrey nounderline"
+                            multiline
+                            rows="10"
+                            type="text"
+                            label="Please Input Text Here"
+                            changeUpdate
+                            [(ngModel)]="editText"
+                            *ngIf="editModeStatus">
+            </material-input>
+
+
+            <p class="result-card-text" *ngIf="editModeStatus==false">
+                {{originalText}}
+            </p>
+            <div toolbelt>
+                <material-button icon (click)="editMode()" *ngIf="editModeStatus==false">
+                    <material-icon icon="edit"></material-icon>
+                </material-button>
+                <material-button class="color--primary-reset" (click)="clearEditMode()" *ngIf="editModeStatus==true">
+                    <material-icon class="icon-format" icon="refresh"></material-icon>
+                    Clear
+                </material-button>
+                <material-button class="color--primary-reset" (click)="cancelEditMode()" *ngIf="editModeStatus==true">
+                    <material-icon class="icon-format" icon="cancel"></material-icon>
+                    Cancel
+                </material-button>
+                <material-button class="color--primary-action" (click)="submitText()" *ngIf="editModeStatus==true">
+                    <material-icon class="icon-format" icon="check" ></material-icon>
+                    Submit
+                </material-button>
+            </div>
+        </material-expansionpanel>
+    </material-expansionpanel-set>
+
+</section>
+
+<section>
+    <skawa-card id="error-card" *ngIf="errorMessage">
+        <skawa-card-header id="error-card-message-header">
+            <div id="error-card-icon-div">
+                <material-icon id="error-message-icon" icon="clear"></material-icon>
+            </div>
+            <div id="error-card-text-content">
+                <skawa-header-title id="error-message-title">Submit Failed !</skawa-header-title>
+                <skawa-header-subhead id="error-message-sub">Either the text was empty or not long enough!</skawa-header-subhead>
+            </div>
+        </skawa-card-header>
+    </skawa-card>
+</section>
+
+
 <section>
     <skawa-card>
         <skawa-card-header statusColor="rgb(0,152,219)">
             <skawa-header-title>Result: </skawa-header-title>
         </skawa-card-header>
-        <skawa-card-content>
+        <skawa-card-content *ngIf="isLoading==false">
             <p class="result-card-text">{{textResult.summary}}</p>
 
             <hr>
@@ -18,6 +88,12 @@
                 </material-chips>
             </section>
         </skawa-card-content>
+        <skawa-card-content *ngIf="isLoading">
+            <section>
+                <div class="lds-css ng-scope"><div style="width:100%;height:100%" class="lds-rolling"><div></div></div></div>
+            </section>
+        </skawa-card-content>
+
     </skawa-card>
 
 </section>

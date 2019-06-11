@@ -1,11 +1,19 @@
 @import 'package:angular_components/css/material/material';
 @import 'package:angular_components/material_chips/mixins';
+@import 'package:angular_components/material_expansionpanel/mixins';
+@import 'package:angular_components/css/material/material';
+@import 'package:angular_components/material_input/mixins';
+@import 'package:angular_components/material_icon/mixins';
+
+
 
 :host{
   .result-card-text{
     font-size: 16px;
     color: hsl(0, 0%, 20%);
-    margin: 0.5%
+    margin: 0.5%;
+    white-space: pre-wrap;
+    line-height: 26px;
   }
   hr{
     margin:20px;
@@ -17,4 +25,203 @@
     @include material-chip-padding(5px);
   }
 
+  #requestContent{
+    margin: 2vmax 0 2vmax 0;
+  }
+
+  .custom-request-expansion-panel{
+    @include expansionpanel-header-min-height(80px, 80px);
+  }
+  .custom-request-expansion-panel [toolbelt] {
+    align-items: center;
+    display: block;
+    justify-content: space-between;
+    color: $mat-light-transparent-black;
+    padding-right: $mat-grid * 4;
+    text-align: right;
+  }
+
+  .header-requestContent{
+    font-size: $mat-font-size-headline;
+    font-weight: $mat-font-weight-regular;
+    margin-bottom: 1%;
+  }
+  .header-requestContent.invalid{
+    color: $mat-red;
+  }
+
+
+  .subhead-requestContent{
+    font-size: $mat-font-size-caption;
+    font-weight: $mat-font-weight-regular;
+    color: $mat-light-transparent-black;
+    margin-top: 0;
+    margin-bottom: 20px;
+
+  }
+
+
+
+
+
+  #error-card-message-header{
+    display:table;
+    width:100%;
+    padding: 0;
+    height: 5vmax;
+  }
+
+  #error-card-icon-div{
+    display:table-cell;
+    background-color:$mat-red;
+    width:10%;
+    text-align: center;
+    vertical-align: middle;
+
+  }
+
+  #error-card-text-content{
+    display:table-cell;
+    width:90%;
+    padding-left: 2vmax;
+    vertical-align: middle;
+
+  }
+
+
+  #error-card{
+    width: 50%;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  #error-message-sub{
+    color: $mat-red;
+    font-size: 1.2vmax;
+    font-weight: 300;
+  }
+  #error-message-title{
+    color: $mat-red;
+    font-size: 1.5vmax;
+    font-weight: 500;
+  }
+
+
+
+  //Material_Input Formatting
+  .card-input-size{
+    display:block;
+    width: 100%;
+    padding-left: 1vmin;
+    padding-right: 1vmin;
+    font-size: 16px;
+    line-height: 26px;
+    color: #616161;
+  }
+  material-input {
+    &.darkgrey {
+      @include input-label-color(#616161);
+    }
+    &.nounderline{
+      @include material-input-no-underline()
+    }
+  }
+  material-icon {
+    &#error-message-icon {
+      color: white;
+      @include material-icon-size(35 px);
+      @include material-icon-weight(900)
+    }
+  }
+
+
+  #submitted-text-panel.invalid {
+    /* also need animation and -moz-animation */
+    animation: shake 0.4s 1 linear;
+    -webkit-animation: shake 0.4s 1 linear;
+    -moz-animation: shake 0.4s 1 linear;
+
+  }
+
+  /* also need keyframes and -moz-keyframes */
+
+  /* also need keyframes and -moz-keyframes */
+  @keyframes shake {
+    0% { transform: translate(30px); }
+    20% { transform: translate(-30px); }
+    40% { transform: translate(15px); }
+    60% { transform: translate(-15px); }
+    80% { transform: translate(8px); }
+    100% { transform: translate(0px); }
+  }
+
+  @-webkit-keyframes shake {
+    0% { -webkit-transform: translate(30px); }
+    20% { -webkit-transform: translate(-30px); }
+    40% { -webkit-transform: translate(15px); }
+    60% { -webkit-transform: translate(-15px); }
+    80% { -webkit-transform: translate(8px); }
+    100% { -webkit-transform: translate(0px); }
+  }
+  @-moz-keyframes shake {
+    0% { -moz-transform: translate(30px); }
+    20% { -moz-transform: translate(-30px); }
+    40% { -moz-transform: translate(15px); }
+    60% { -moz-transform: translate(-15px); }
+    80% { -moz-transform: translate(8px); }
+    100% { -moz-transform: translate(0px); }
+  }
+
+  .header-text-div{
+  }
+
+  .lds-css{
+  }
+  @keyframes lds-rolling {
+    0% {
+      -webkit-transform: translate(-50%, -50%) rotate(0deg);
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      -webkit-transform: translate(-50%, -50%) rotate(360deg);
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  @-webkit-keyframes lds-rolling {
+    0% {
+      -webkit-transform: translate(-50%, -50%) rotate(0deg);
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      -webkit-transform: translate(-50%, -50%) rotate(360deg);
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  .lds-rolling {
+    position: relative;
+  }
+  .lds-rolling div,
+  .lds-rolling div:after {
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    border: 6px solid #4285f4;
+    border-top-color: transparent;
+    border-radius: 50%;
+  }
+  .lds-rolling div {
+    -webkit-animation: lds-rolling 0.8s linear infinite;
+    animation: lds-rolling 0.8s linear infinite;
+    top: 30px;
+    left: 30px;
+  }
+  .lds-rolling div:after {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  .lds-rolling {
+    width: 60px !important;
+    height: 60px !important;
+    -webkit-transform: translate(-30px, -30px) scale(1) translate(30px, 30px);
+    transform: translate(-30px, -30px) scale(1) translate(30px, 30px);
+  }
 }

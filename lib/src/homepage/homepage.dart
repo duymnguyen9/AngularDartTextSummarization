@@ -26,6 +26,7 @@ import 'package:StanfordAngNLP/src/component/result/result.dart';
     coreDirectives,
     NgClass,
     ResultComponent,
+    SkawaCardComponent
   ],
   styleUrls: [
     'homepage.scss.css'
@@ -50,6 +51,7 @@ class HomepageComponent {
 
   void submitText(){
     errorMessage = false;
+
     if(boundText.length<50){
       errorMessage = true;
     }
@@ -58,12 +60,12 @@ class HomepageComponent {
     }
   }
 
+
   Future<void> getResult() async{
     isLoading = true;
     textResult = await _textResultService.createPost('http://127.0.0.1:5000/textsubmit', boundText);
     isLoading = false;
     isResult = true;
-    print(textResult.keywords);
   }
   //TODO GET THE RESULT AND DISPLAY IT
 
