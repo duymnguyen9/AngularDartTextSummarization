@@ -26,7 +26,16 @@ import 'package:StanfordAngNLP/src/component/result/result.dart';
     coreDirectives,
     NgClass,
     ResultComponent,
-    SkawaCardComponent
+    SkawaCardComponent,
+    MaterialExpansionPanelSet,
+    MaterialExpansionPanel,
+    MaterialInputComponent,
+    materialNumberInputDirectives,
+    MaterialSliderComponent,
+    MaterialExpansionPanelAutoDismiss,
+
+
+
   ],
   styleUrls: [
     'homepage.scss.css'
@@ -44,6 +53,8 @@ class HomepageComponent {
   bool errorMessage = false;
   bool isResult = false;
   bool isLoading = false;
+  bool isCustomToolBeltPanelExpanded = true;
+
 
   void clearText(){
     boundText = '';
@@ -63,11 +74,24 @@ class HomepageComponent {
 
   Future<void> getResult() async{
     isLoading = true;
-    textResult = await _textResultService.createPost('http://127.0.0.1:5000/textsubmit', boundText);
+    textResult = await _textResultService.createPost('http://127.0.0.1:5000/textsubmit', boundText, wordCount, contentPercent);
     isLoading = false;
     isResult = true;
   }
-  //TODO GET THE RESULT AND DISPLAY IT
+
+  void cancelCustomization(){
+    //TODO reverse back to previous settings
+  }
+
+  void submitCustomization(){
+    //TODO set customization
+  }
+
+
+
+
+  num wordCount;
+  num contentPercent = 50;
 
 
 

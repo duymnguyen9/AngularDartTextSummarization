@@ -5,8 +5,8 @@ import 'dart:convert';
 
 
 class TextResultService{
-  Future<TextResult> createPost(String url, String submittedText) async {
-    var body = json.encode({"content": submittedText});
+  Future<TextResult> createPost(String url, String submittedText, int wordCount, int summaryRatio) async {
+    var body = json.encode({"content": submittedText, "wordcount": wordCount, "summaryratio":summaryRatio});
     Map<String, String> requestHeaders = {
       'Content-type': 'application/json',
       'Accept': 'application/json',

@@ -9,7 +9,6 @@ import 'package:angular_components/material_chips/material_chips.dart';
 
 
 
-
 @Component(
   selector: 'result-page',
   templateUrl: 'result.html',
@@ -31,7 +30,10 @@ import 'package:angular_components/material_chips/material_chips.dart';
     MaterialMultilineInputComponent,
     materialInputDirectives,
     skawaCardDirectives,
-    SkawaCardComponent
+    SkawaCardComponent,
+    materialNumberInputDirectives,
+    MaterialSliderComponent,
+
 
 
 
@@ -90,15 +92,23 @@ class ResultComponent{
   Future<void> getResult() async{
     isCustomToolBeltPanelExpanded = false;
     isLoading = true;
-    textResult = await _textResultService.createPost('http://127.0.0.1:5000/textsubmit', editText);
-    originalText = textResult.summary;
+    textResult = await _textResultService.createPost('http://127.0.0.1:5000/textsubmit', editText, wordCount, contentPercent);
+    originalText = editText;
+    print(editText);
     editModeStatus = false;
     isLoading = false;
   }
+  num wordCount;
+  num contentPercent = 50;
 
 
+  void cancelCustomization(){
+    //TODO reverse back to previous settings
+  }
 
-
+  void submitCustomization(){
+    //TODO set customization
+  }
 }
 
 class Chip implements HasUIDisplayName {

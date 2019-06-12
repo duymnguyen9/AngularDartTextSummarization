@@ -1,6 +1,8 @@
 @import 'package:angular_components/css/material/material';
 @import 'package:angular_components/material_input/mixins';
 @import 'package:angular_components/material_icon/mixins';
+@import 'package:angular_components/material_slider/mixins';
+@import 'package:angular_components/css/material/shadow';
 
 
 
@@ -78,6 +80,7 @@ material-input {
 
   #card-input-main {
     margin-bottom: 50px;
+    margin-top: 50px;
   }
   material-button {
     font-size: 24px;
@@ -229,8 +232,63 @@ material-input {
     100% { -moz-transform: translate(0px); }
   }
 
+  .word-count-title{
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+  .slider-value{
+    padding-left: 20px;
+    font-size: 16px;
+    margin-top: 0;
+
+  }
+
+  .header-requestContent{
+    font-size: $mat-font-size-headline;
+    font-weight: $mat-font-weight-regular;
+    margin-bottom: 1%;
+  }
+  material-slider {
+    display: inline-block;
+    width: 70%;
+  }
+
+  .content-percent-div{
+    width: 40%;
+    height: 5vmax;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+    padding-bottom: 30px;
+  }
+  .word-count-div{
+    width: 40%;
+    height: 5vmax;
+    display: inline-block;
+    vertical-align: top;
+    padding-bottom: 30px;
+    padding-left: 20px;
 
 
+  }
 
+  .panel-content{
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+
+    justify-content: left;
+    align-items: center;
+  }
+  .expansion-customization-panel [toolbelt] {
+    align-items: center;
+    display: block;
+    justify-content: space-between;
+    color: $mat-light-transparent-black;
+    padding-right: $mat-grid * 4;
+    text-align: right;
+  }
 
 }
