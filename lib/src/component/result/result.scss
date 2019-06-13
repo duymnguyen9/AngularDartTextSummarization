@@ -227,9 +227,10 @@
 
 
   .word-count-title{
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 10px;
     margin-top: 0;
+    font-weight: 600;
   }
   .slider-value{
     padding-left: 20px;
@@ -240,7 +241,7 @@
 
   .header-requestContent{
     font-size: $mat-font-size-headline;
-    font-weight: $mat-font-weight-regular;
+    font-weight: 600;
     margin-bottom: 1%;
   }
   material-slider {
@@ -257,12 +258,12 @@
     padding-bottom: 30px;
   }
   .word-count-div{
-    width: 40%;
+    width: 20vmax;
     height: 5vmax;
     display: inline-block;
     vertical-align: top;
     padding-bottom: 30px;
-    padding-left: 20px;
+    padding-left: 20%;
 
 
   }
@@ -273,6 +274,7 @@
     display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
     display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
 
+    margin-top: 20px;
     justify-content: left;
     align-items: center;
   }
@@ -283,5 +285,36 @@
     color: $mat-light-transparent-black;
     padding-right: $mat-grid * 4;
     text-align: right;
+  }
+
+
+  .color--primary-edit{
+    color: #ff6f00;
+    font-weight: 500;
+
+  }
+  material-button {
+    font-size: 24px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .color--primary-action {
+    color: #006CB8;
+    font-weight: 500;
+  }
+  .color--primary-reset {
+    color: #e98300;
+    font-weight: 500;
+  }
+
+  .color--primary-cancel{
+    color: #757575;
+    font-weight: 500;
+
+  }
+  .icon-format{
+    padding-left: 5px;
+    padding-right: 10px;
   }
 }

@@ -3,6 +3,7 @@
 @import 'package:angular_components/material_icon/mixins';
 @import 'package:angular_components/material_slider/mixins';
 @import 'package:angular_components/css/material/shadow';
+@import 'package:angular_components/material_expansionpanel/mixins';
 
 
 
@@ -76,6 +77,12 @@ material-input {
   .color--primary-reset {
     color: #e98300;
     font-weight: 500;
+  }
+
+  .color--primary-cancel{
+    color: #757575;
+    font-weight: 500;
+
   }
 
   #card-input-main {
@@ -233,9 +240,10 @@ material-input {
   }
 
   .word-count-title{
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 10px;
     margin-top: 0;
+    font-weight: 600;
   }
   .slider-value{
     padding-left: 20px;
@@ -279,16 +287,33 @@ material-input {
     display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
     display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
 
+    margin-top: 20px;
     justify-content: left;
     align-items: center;
   }
+
+  .expansion-customization-panel{
+    @include expansionpanel-header-min-height(80px, 80px);
+
+  }
+
   .expansion-customization-panel [toolbelt] {
     align-items: center;
     display: block;
     justify-content: space-between;
-    color: $mat-light-transparent-black;
     padding-right: $mat-grid * 4;
+    background-color: #f2f2f2;
     text-align: right;
+    border-top: 1px white solid;
+
+  }
+
+  .customization-parameter-display{
+    font-size: 18px;
+    color: $mat-grey-600;
+    padding-right: 10%;
+    padding-left: 10%;
+
   }
 
 }

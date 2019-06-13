@@ -2,7 +2,6 @@
     <material-expansionpanel-set>
         <material-expansionpanel wide
                                  autoDismissable
-                                 value="All conversions"
                                  class = "custom-request-expansion-panel"
                                  id = "submitted-text-panel"
                                  [ngClass]="{'invalid': errorMessage}"
@@ -18,7 +17,7 @@
             <div class = "panel-content" *ngIf="editModeStatus">
                 <div class = "word-count-div">
                     <p class="word-count-title">Word Count:</p>
-                    <material-input type="number" keypressUpdate required [(ngModel)]="wordCount" label="Input number here">
+                    <material-input class = "darkgrey" type="number" keypressUpdate required [(ngModel)]="wordCount" label="Input number here">
                     </material-input>
                 </div>
                 <div class = "content-percent-div">
@@ -49,14 +48,15 @@
                 {{originalText}}
             </p>
             <div toolbelt>
-                <material-button icon (click)="editMode()" *ngIf="editModeStatus==false">
-                    <material-icon icon="edit"></material-icon>
+                <material-button class="color--primary-edit" icon (click)="editMode()" *ngIf="editModeStatus==false">
+                    <material-icon  class="icon-format" icon="edit"></material-icon>
+                    Edit
                 </material-button>
                 <material-button class="color--primary-reset" (click)="clearEditMode()" *ngIf="editModeStatus==true">
                     <material-icon class="icon-format" icon="refresh"></material-icon>
                     Clear
                 </material-button>
-                <material-button class="color--primary-reset" (click)="cancelEditMode()" *ngIf="editModeStatus==true">
+                <material-button class="color--primary-cancel" (click)="cancelEditMode()" *ngIf="editModeStatus==true">
                     <material-icon class="icon-format" icon="cancel"></material-icon>
                     Cancel
                 </material-button>

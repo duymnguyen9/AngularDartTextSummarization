@@ -13,13 +13,22 @@
                                  [expanded]="isCustomToolBeltPanelExpanded"
                                  (expandedChange)="isCustomToolBeltPanelExpanded = $event">
             <div name >
-                <p class = "header-requestContent">Customization</p>
+                <p class = "header-requestContent" *ngIf="isCustomToolBeltPanelExpanded">Customization</p>
+                <p class = "header-requestContent" *ngIf="isCustomToolBeltPanelExpanded==false">
+                    Customization:
+                </p>
+
+            </div>
+
+            <div value>
+                <span class="customization-parameter-display" *ngIf="confirmedWordCount != null && isCustomToolBeltPanelExpanded==false"> Word Count: {{confirmedWordCount}}</span>
+                <span class="customization-parameter-display" *ngIf="isCustomToolBeltPanelExpanded==false"> Summary Ratio: {{confirmedContentPercent}}%</span>
             </div>
 
             <div class = "panel-content">
                 <div class = "word-count-div">
                     <p class="word-count-title">Word Count:</p>
-                    <material-input type="number" keypressUpdate required [(ngModel)]="wordCount" label="Input number here">
+                    <material-input class="darkgrey" type="number" keypressUpdate required [(ngModel)]="wordCount" label="Input word count value">
                     </material-input>
                 </div>
                 <div class = "content-percent-div">
@@ -35,13 +44,13 @@
                 </div>
             </div>
             <div toolbelt>
-                <material-button class="color--primary-reset" (click)="cancelCustomization()">
+                <material-button class="color--primary-cancel" (click)="cancelCustomization()">
                     <material-icon class="icon-format" icon="cancel"></material-icon>
                     Cancel
                 </material-button>
                 <material-button class="color--primary-action" (click)="submitCustomization()">
                     <material-icon class="icon-format" icon="check" ></material-icon>
-                    OK
+                    Apply
                 </material-button>
             </div>
 
@@ -67,7 +76,7 @@
                             multiline
                             rows="10"
                             type="text"
-                            label="Please Input Text Here"
+                            label="Please Input Text Here, Essay is expected to have at least 10 sentences."
                             blurUpdate [(ngModel)]="boundText">
             </material-input>
         </skawa-card-content>
@@ -94,11 +103,14 @@
             </div>
             <div id="error-card-text-content">
                 <skawa-header-title id="error-message-title">Submit Failed !</skawa-header-title>
-                <skawa-header-subhead id="error-message-sub">Either the text was empty or not long enough!</skawa-header-subhead>
+                <skawa-header-subhead id="error-message-sub" *ngIf="errorMessageCode==1">Input text is expected to have at least 10 sentences.</skawa-header-subhead>
+                <skawa-header-subhead id="error-message-sub" *ngIf="errorMessageCode==0">Input Text is empty or not a sentences, please resolves this issues.</skawa-header-subhead>
             </div>
         </skawa-card-header>
     </skawa-card>
 </section>
+
+
 
 
 <result-page *ngIf="isResult" [textResult] = "textResult" [originalText] = "boundText"></result-page>

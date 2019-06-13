@@ -55,6 +55,7 @@ class HomepageComponent {
   bool isLoading = false;
   bool isCustomToolBeltPanelExpanded = true;
 
+  int errorMessageCode;
 
   void clearText(){
     boundText = '';
@@ -62,8 +63,8 @@ class HomepageComponent {
 
   void submitText(){
     errorMessage = false;
-
-    if(boundText.length<50){
+    errorMessageCode = _textResultService.validatingInput(boundText);
+    if(errorMessageCode<2){
       errorMessage = true;
     }
     else{
@@ -72,19 +73,32 @@ class HomepageComponent {
   }
 
 
+
+
+
+
   Future<void> getResult() async{
+    confirmedContentPercent??=contentPercent;
     isLoading = true;
-    textResult = await _textResultService.createPost('http://127.0.0.1:5000/textsubmit', boundText, wordCount, contentPercent);
+    textResult = await _textResultService.createPost('http://127.0.0.1:5000/textsubmit', boundText, confirmedWordCount, confirmedContentPercent);
     isLoading = false;
     isResult = true;
   }
 
   void cancelCustomization(){
-    //TODO reverse back to previous settings
+    if(confirmedWordCount!= null){
+      wordCount = confirmedWordCount;
+    }
+    contentPercent = confirmedContentPercent;
+
   }
 
   void submitCustomization(){
-    //TODO set customization
+    if(wordCount != null){
+      confirmedWordCount = wordCount;
+    }
+    confirmedContentPercent = contentPercent;
+    isCustomToolBeltPanelExpanded = false;
   }
 
 
@@ -92,6 +106,9 @@ class HomepageComponent {
 
   num wordCount;
   num contentPercent = 50;
+
+  num confirmedWordCount;
+  num confirmedContentPercent = 50;
 
 
 
