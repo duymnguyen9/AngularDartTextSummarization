@@ -1,9 +1,9 @@
 @import 'package:angular_components/css/material/material';
 @import 'package:angular_components/material_chips/mixins';
 @import 'package:angular_components/material_expansionpanel/mixins';
-@import 'package:angular_components/css/material/material';
 @import 'package:angular_components/material_input/mixins';
 @import 'package:angular_components/material_icon/mixins';
+
 
 
 
@@ -21,8 +21,10 @@
 
   .clickable {
     @include material-chips-clickable();
-    @include material-chip-font-size(18px);
-    @include material-chip-padding(5px);
+    @include material-chip-font-size(20px);
+    @include material-chip-padding(0 10px 0 10px);
+    @include material-chips-padding(20px);
+
   }
 
   #requestContent{
@@ -316,5 +318,10 @@
   .icon-format{
     padding-left: 5px;
     padding-right: 10px;
+  }
+
+  .chip-header{
+    @include mat-font-title();
+    margin-bottom: 10px;
   }
 }

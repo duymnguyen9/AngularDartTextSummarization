@@ -48,6 +48,10 @@ class ResultComponent{
   TextResult textResult;
   @Input()
   String originalText;
+  @Input()
+  num wordCount;
+  @Input()
+  num contentPercent;
 
 
   bool isCustomToolBeltPanelExpanded = false;
@@ -73,15 +77,24 @@ class ResultComponent{
   }
   void cancelEditMode(){
     editModeStatus = false;
+    if(confirmedWordCount!= null){
+      wordCount = confirmedWordCount;
+    }
+    contentPercent = confirmedContentPercent;
   }
   void editMode(){
     editText = originalText;
     editModeStatus = true;
   }
   void submitText(){
-    print(editText);
+    if(wordCount != null){
+      confirmedWordCount = wordCount;
+    }
+    confirmedContentPercent = contentPercent;
+    isCustomToolBeltPanelExpanded = false;
     errorMessage = false;
-    if(editText.length<50){
+    errorMessageCode = _textResultService.validatingInput(editText);
+    if(errorMessageCode<2){
       errorMessage = true;
     }
     else{
@@ -89,26 +102,21 @@ class ResultComponent{
     }
   }
 
+  int errorMessageCode;
+
+
   Future<void> getResult() async{
     isCustomToolBeltPanelExpanded = false;
     isLoading = true;
-    textResult = await _textResultService.createPost('http://127.0.0.1:5000/textsubmit', editText, wordCount, contentPercent);
+    textResult = await _textResultService.createPost('http://127.0.0.1:5000/textsubmit', editText, confirmedWordCount, confirmedContentPercent);
     originalText = editText;
     print(editText);
     editModeStatus = false;
     isLoading = false;
   }
-  num wordCount;
-  num contentPercent = 50;
+  num confirmedWordCount;
+  num confirmedContentPercent = 50;
 
-
-  void cancelCustomization(){
-    //TODO reverse back to previous settings
-  }
-
-  void submitCustomization(){
-    //TODO set customization
-  }
 }
 
 class Chip implements HasUIDisplayName {

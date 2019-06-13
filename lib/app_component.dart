@@ -17,3 +17,6 @@ import 'package:angular_router/angular_router.dart';
 class AppComponent {
   // Nothing here yet. All logic is in TodoListComponent.
 }
+
+//TODO: need to create toggle for either ratio or word count
+//TODO: add hint onto wordCount to 

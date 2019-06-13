@@ -104,7 +104,7 @@
             <div id="error-card-text-content">
                 <skawa-header-title id="error-message-title">Submit Failed !</skawa-header-title>
                 <skawa-header-subhead id="error-message-sub" *ngIf="errorMessageCode==1">Input text is expected to have at least 10 sentences.</skawa-header-subhead>
-                <skawa-header-subhead id="error-message-sub" *ngIf="errorMessageCode==0">Input Text is empty or not a sentences, please resolves this issues.</skawa-header-subhead>
+                <skawa-header-subhead id="error-message-sub" *ngIf="errorMessageCode==0">Input Text is empty, please resolves this issues.</skawa-header-subhead>
             </div>
         </skawa-card-header>
     </skawa-card>
@@ -113,4 +113,4 @@
 
 
 
-<result-page *ngIf="isResult" [textResult] = "textResult" [originalText] = "boundText"></result-page>
+<result-page *ngIf="isResult" [textResult] = "textResult" [originalText] = "boundText" [wordCount]="confirmedWordCount" [contentPercent]="confirmedContentPercent"></result-page>

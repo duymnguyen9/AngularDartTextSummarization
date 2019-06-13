@@ -13,6 +13,10 @@
                 <p class = "header-requestContent" [ngClass]="{'invalid': errorMessage}">Submitted Text</p>
                 <p class = "subhead-requestContent" *ngIf="isCustomToolBeltPanelExpanded== false">click for more info</p>
             </div>
+            <div value>
+                <span class="customization-parameter-display" *ngIf="confirmedWordCount != null && isCustomToolBeltPanelExpanded==false"> Word Count: {{confirmedWordCount}}</span>
+                <span class="customization-parameter-display" *ngIf="isCustomToolBeltPanelExpanded==false"> Summary Ratio: {{confirmedContentPercent}}%</span>
+            </div>
 
             <div class = "panel-content" *ngIf="editModeStatus">
                 <div class = "word-count-div">
@@ -80,7 +84,8 @@
             </div>
             <div id="error-card-text-content">
                 <skawa-header-title id="error-message-title">Submit Failed !</skawa-header-title>
-                <skawa-header-subhead id="error-message-sub">Either the text was empty or not long enough!</skawa-header-subhead>
+                <skawa-header-subhead id="error-message-sub" *ngIf="errorMessageCode==1">Input text is expected to have at least 10 sentences.</skawa-header-subhead>
+                <skawa-header-subhead id="error-message-sub" *ngIf="errorMessageCode==0">Input Text is empty, please resolves this issues.</skawa-header-subhead>
             </div>
         </skawa-card-header>
     </skawa-card>
@@ -98,9 +103,10 @@
             <hr>
 
             <section>
+                <p class="chip-header">Keywords: </p>
                 <material-chips class="clickable">
                     <material-chip *ngFor="let c of listOfChips()"
-                                   emphasis [removable]="false"
+                                   [removable]="false"
                                    [value]="c"
                                    displayNameRenderer></material-chip>
 
