@@ -1,5 +1,4 @@
 import 'package:angular/angular.dart';
-import 'package:StanfordAngNLP/src/component/stanfordlogo/stanfordlogo.dart';
 import 'package:angular_components/material_input/material_input.dart';
 import 'package:angular_components/material_input/material_input_multiline.dart';
 import 'package:angular_components/angular_components.dart';
@@ -11,6 +10,7 @@ import 'package:StanfordAngNLP/src/service/text_result_service.dart';
 import 'dart:async';
 
 import 'package:StanfordAngNLP/src/component/result/result.dart';
+import 'package:StanfordAngNLP/src/component/component.dart';
 
 
 
@@ -33,6 +33,7 @@ import 'package:StanfordAngNLP/src/component/result/result.dart';
     materialNumberInputDirectives,
     MaterialSliderComponent,
     MaterialExpansionPanelAutoDismiss,
+    ControlPanelComponent
 
 
 

@@ -18,24 +18,12 @@
                 <span class="customization-parameter-display" *ngIf="isCustomToolBeltPanelExpanded==false"> Summary Ratio: {{confirmedContentPercent}}%</span>
             </div>
 
-            <div class = "panel-content" *ngIf="editModeStatus">
-                <div class = "word-count-div">
-                    <p class="word-count-title">Word Count:</p>
-                    <material-input class = "darkgrey" type="number" keypressUpdate required [(ngModel)]="wordCount" label="Input number here">
-                    </material-input>
-                </div>
-                <div class = "content-percent-div">
+            <control-panel>
+            </control-panel>
 
-                    <p class="word-count-title">Summary Ratio:</p>
-                    <material-slider [(value)]="contentPercent"
-                                     [min]="20"
-                                     [step]="5"
-                                     [max]="75"></material-slider>
 
-                    <span class="slider-value">{{contentPercent}}%</span>
 
-                </div>
-            </div>
+
 
             <material-input class="card-input-size darkgrey nounderline"
                             multiline

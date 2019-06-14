@@ -19,4 +19,4 @@ class AppComponent {
 }
 
 //TODO: need to create toggle for either ratio or word count
-//TODO: add hint onto wordCount to 
+//TODO: add hint onto wordCount to

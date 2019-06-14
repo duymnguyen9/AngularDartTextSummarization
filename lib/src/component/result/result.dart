@@ -4,8 +4,7 @@ import 'package:skawa_material_components/card/card.dart';
 
 import 'package:StanfordAngNLP/src/service/text_result.dart';
 import 'package:StanfordAngNLP/src/service/text_result_service.dart';
-import 'package:angular_components/material_chips/material_chip.dart';
-import 'package:angular_components/material_chips/material_chips.dart';
+import 'package:StanfordAngNLP/src/component/component.dart';
 
 
 
@@ -33,6 +32,8 @@ import 'package:angular_components/material_chips/material_chips.dart';
     SkawaCardComponent,
     materialNumberInputDirectives,
     MaterialSliderComponent,
+    ControlPanelComponent
+
 
 
 

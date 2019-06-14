@@ -1,0 +1,18 @@
+<div class = "panel-content">
+    <div class = "word-count-div">
+        <p class="word-count-title">Word Count:</p>
+        <material-input class="darkgrey" type="number" keypressUpdate required [(ngModel)]="wordCount" label="Input word count value">
+        </material-input>
+    </div>
+    <div class = "content-percent-div">
+
+        <p class="word-count-title">Summary Ratio:</p>
+        <material-slider [(value)]="contentPercent"
+                         [min]="20"
+                         [step]="5"
+                         [max]="75"></material-slider>
+
+        <span class="slider-value">{{contentPercent}}%</span>
+
+    </div>
+</div>
