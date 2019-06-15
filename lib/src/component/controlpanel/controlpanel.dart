@@ -1,5 +1,7 @@
 import 'package:angular/angular.dart';
 import 'package:angular_components/angular_components.dart';
+import 'dart:async';
+
 
 
 @Component(
@@ -12,20 +14,42 @@ import 'package:angular_components/angular_components.dart';
     MaterialSliderComponent,
     materialInputDirectives,
     coreDirectives,
-  ]
+
+
+
+    AutoFocusDirective,
+    MaterialButtonComponent,
+    MaterialIconComponent,
+    materialInputDirectives,
+    MaterialMultilineInputComponent,
+    materialNumberInputDirectives,
+    MaterialPaperTooltipComponent,
+    MaterialTooltipTargetDirective,
+    NgIf,
+  ],
+  providers: [materialProviders],
+
 )
 
 
-class ControlPanelComponent{
-  @Input()
-  num wordCount;
-  @Input()
-  num contentPercent=50;
+class ControlPanelComponent
+{
 
+  //@Input()
+  num wordCount;
+  num contentPercentInput=30;
+  @Input()
+  num contentPercent;
+
+  final _changeController = StreamController<num>.broadcast(sync: true);
   @Output()
-  num confirmedWordCount;
-  @Output()
-  num confirmedContentPercent = 50;
+  Stream<num> get contentPercentChange => _changeController.stream;
+  
+  void updateContentPercent(){
+
+    _changeController.add(contentPercent);
+  }
+
 
 
 }

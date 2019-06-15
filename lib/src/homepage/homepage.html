@@ -26,10 +26,8 @@
             </div>
 
 
-
-
-            <!-- TODO: Adding controlpanel component here -->
-            <control-panel>
+            <control-panel [(contentPercent)]="contentPercent">
+           <!-- <control-panel [(wordCount)]= "wordCount" [(contentPercent)]="contentPercent" > -->
             </control-panel>
 
 
@@ -49,6 +47,15 @@
 
         </material-expansionpanel>
     </material-expansionpanel-set>
+
+
+    <section>
+        <h2>wordCount: {{wordCount}}</h2>
+        <h2>contentPercent: {{contentPercent}}</h2>
+        <h2>confirmedWordCount: {{confirmedWordCount}}</h2>
+        <h2>confirmedContentPercent: {{confirmedContentPercent}}</h2>
+
+    </section>
 
     <skawa-card id="card-input-main" [ngClass]="{'invalid': errorMessage}">
         <skawa-card-header statusColor="rgb(140,21,21)" id="card-input-header">

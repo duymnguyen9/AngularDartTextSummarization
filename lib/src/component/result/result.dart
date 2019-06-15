@@ -111,12 +111,15 @@ class ResultComponent{
     isLoading = true;
     textResult = await _textResultService.createPost('http://127.0.0.1:5000/textsubmit', editText, confirmedWordCount, confirmedContentPercent);
     originalText = editText;
-    print(editText);
     editModeStatus = false;
     isLoading = false;
   }
   num confirmedWordCount;
   num confirmedContentPercent = 50;
+
+  //control panel components
+  bool confirmedSubmit = false;
+
 
 }
 

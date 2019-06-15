@@ -106,13 +106,14 @@ class HomepageComponent {
 
 
   num wordCount;
-  num contentPercent = 50;
+  num contentPercent = 60;
 
   num confirmedWordCount;
-  num confirmedContentPercent = 50;
+  num confirmedContentPercent = 30;
 
 
-
+  //control panel components
+  bool confirmedSubmit = false;
 
 
 }
