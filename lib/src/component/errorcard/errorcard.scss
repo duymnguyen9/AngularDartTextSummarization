@@ -1,0 +1,56 @@
+@import 'package:angular_components/material_icon/mixins';
+@import 'package:angular_components/css/material/material';
+
+
+:host{
+
+  #error-card-message-header{
+    display:table;
+    width:100%;
+    padding: 0;
+    height: 5vmax;
+  }
+
+  #error-card-icon-div{
+    display:table-cell;
+    background-color:$mat-red;
+    width:10%;
+    text-align: center;
+    vertical-align: middle;
+
+  }
+
+  #error-card-text-content{
+    display:table-cell;
+    width:90%;
+    padding-left: 2vmax;
+    vertical-align: middle;
+
+  }
+
+
+  #error-card{
+    width: 50%;
+    margin: auto;
+  }
+  #error-message-sub{
+    color: $mat-red;
+    font-size: 1.2vmax;
+    font-weight: 300;
+  }
+  #error-message-title{
+    color: $mat-red;
+    font-size: 1.5vmax;
+    font-weight: 500;
+  }
+
+
+  material-icon {
+    &#error-message-icon {
+      color: white;
+      @include material-icon-size(35 px);
+      @include material-icon-weight(900)
+    }
+  }
+
+}

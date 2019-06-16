@@ -8,7 +8,7 @@
                                  [showSaveCancel]="false"
                                  [expanded]="isCustomToolBeltPanelExpanded"
                                  (expandedChange)="isCustomToolBeltPanelExpanded = $event"
-                                 >
+        >
             <div name >
                 <p class = "header-requestContent" [ngClass]="{'invalid': errorMessage}">Submitted Text</p>
                 <p class = "subhead-requestContent" *ngIf="isCustomToolBeltPanelExpanded== false">click for more info</p>
@@ -18,12 +18,24 @@
                 <span class="customization-parameter-display" *ngIf="isCustomToolBeltPanelExpanded==false"> Summary Ratio: {{confirmedContentPercent}}%</span>
             </div>
 
-            <control-panel>
-            </control-panel>
+            <div class = "panel-content" *ngIf="editModeStatus">
+                <div class = "word-count-div">
+                    <p class="word-count-title">Word Count:</p>
+                    <material-input class = "darkgrey" type="number" keypressUpdate required [(ngModel)]="wordCount" label="Input number here">
+                    </material-input>
+                </div>
+                <div class = "content-percent-div">
 
+                    <p class="word-count-title">Summary Ratio:</p>
+                    <material-slider [(value)]="contentPercent"
+                                     [min]="20"
+                                     [step]="5"
+                                     [max]="75"></material-slider>
 
+                    <span class="slider-value">{{contentPercent}}%</span>
 
-
+                </div>
+            </div>
 
             <material-input class="card-input-size darkgrey nounderline"
                             multiline
@@ -64,19 +76,8 @@
 
 </section>
 
-<section>
-    <skawa-card id="error-card" *ngIf="errorMessage">
-        <skawa-card-header id="error-card-message-header">
-            <div id="error-card-icon-div">
-                <material-icon id="error-message-icon" icon="clear"></material-icon>
-            </div>
-            <div id="error-card-text-content">
-                <skawa-header-title id="error-message-title">Submit Failed !</skawa-header-title>
-                <skawa-header-subhead id="error-message-sub" *ngIf="errorMessageCode==1">Input text is expected to have at least 10 sentences.</skawa-header-subhead>
-                <skawa-header-subhead id="error-message-sub" *ngIf="errorMessageCode==0">Input Text is empty, please resolves this issues.</skawa-header-subhead>
-            </div>
-        </skawa-card-header>
-    </skawa-card>
+<section *ngIf="errorMessage">
+    <error-card [errorMessageCode]="errorMessageCode"></error-card>
 </section>
 
 

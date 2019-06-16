@@ -6,7 +6,7 @@
 
     <material-expansionpanel-set *ngIf="isResult == false && isLoading == false">
         <material-expansionpanel class = "expansion-customization-panel"
-                                    wide
+                                 wide
                                  autoDismissable
                                  [showSaveCancel]="false"
                                  value="All conversions"
@@ -25,14 +25,24 @@
                 <span class="customization-parameter-display" *ngIf="isCustomToolBeltPanelExpanded==false"> Summary Ratio: {{confirmedContentPercent}}%</span>
             </div>
 
+            <div class = "panel-content">
+                <div class = "word-count-div">
+                    <p class="word-count-title">Word Count:</p>
+                    <material-input class="darkgrey" type="number" keypressUpdate required [(ngModel)]="wordCount" label="Input word count value">
+                    </material-input>
+                </div>
+                <div class = "content-percent-div">
 
-            <control-panel [(contentPercent)]="contentPercent">
-           <!-- <control-panel [(wordCount)]= "wordCount" [(contentPercent)]="contentPercent" > -->
-            </control-panel>
+                    <p class="word-count-title">Summary Ratio:</p>
+                    <material-slider [(value)]="contentPercent"
+                                     [min]="20"
+                                     [step]="5"
+                                     [max]="75"></material-slider>
 
+                    <span class="slider-value">{{contentPercent}}%</span>
 
-
-
+                </div>
+            </div>
             <div toolbelt>
                 <material-button class="color--primary-cancel" (click)="cancelCustomization()">
                     <material-icon class="icon-format" icon="cancel"></material-icon>
@@ -48,26 +58,17 @@
         </material-expansionpanel>
     </material-expansionpanel-set>
 
-
-    <section>
-        <h2>wordCount: {{wordCount}}</h2>
-        <h2>contentPercent: {{contentPercent}}</h2>
-        <h2>confirmedWordCount: {{confirmedWordCount}}</h2>
-        <h2>confirmedContentPercent: {{confirmedContentPercent}}</h2>
-
-    </section>
-
     <skawa-card id="card-input-main" [ngClass]="{'invalid': errorMessage}">
         <skawa-card-header statusColor="rgb(140,21,21)" id="card-input-header">
             <skawa-header-title>Essay Analysis: </skawa-header-title>
         </skawa-card-header>
 
         <skawa-card-content>
-                <div class="lds-css ng-scope" *ngIf="isLoading">
-                    <div style="width:100%;height:100%" class="lds-dual-ring">
-                        <div></div>
-                    </div>
+            <div class="lds-css ng-scope" *ngIf="isLoading">
+                <div style="width:100%;height:100%" class="lds-dual-ring">
+                    <div></div>
                 </div>
+            </div>
         </skawa-card-content>
 
         <skawa-card-content *ngIf="isResult == false && isLoading == false">
@@ -93,23 +94,9 @@
 
 </section>
 
-
-<section>
-    <skawa-card id="error-card" *ngIf="errorMessage">
-        <skawa-card-header id="error-card-message-header">
-            <div id="error-card-icon-div">
-                <material-icon id="error-message-icon" icon="clear"></material-icon>
-            </div>
-            <div id="error-card-text-content">
-                <skawa-header-title id="error-message-title">Submit Failed !</skawa-header-title>
-                <skawa-header-subhead id="error-message-sub" *ngIf="errorMessageCode==1">Input text is expected to have at least 10 sentences.</skawa-header-subhead>
-                <skawa-header-subhead id="error-message-sub" *ngIf="errorMessageCode==0">Input Text is empty, please resolves this issues.</skawa-header-subhead>
-            </div>
-        </skawa-card-header>
-    </skawa-card>
+<section *ngIf="errorMessage">
+    <error-card [errorMessageCode]="errorMessageCode"></error-card>
 </section>
-
-
 
 
 <result-page *ngIf="isResult" [textResult] = "textResult" [originalText] = "boundText" [wordCount]="confirmedWordCount" [contentPercent]="confirmedContentPercent"></result-page>

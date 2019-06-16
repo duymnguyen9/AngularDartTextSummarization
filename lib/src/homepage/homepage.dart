@@ -1,4 +1,5 @@
 import 'package:angular/angular.dart';
+import 'package:StanfordAngNLP/src/component/stanfordlogo/stanfordlogo.dart';
 import 'package:angular_components/material_input/material_input.dart';
 import 'package:angular_components/material_input/material_input_multiline.dart';
 import 'package:angular_components/angular_components.dart';
@@ -10,7 +11,7 @@ import 'package:StanfordAngNLP/src/service/text_result_service.dart';
 import 'dart:async';
 
 import 'package:StanfordAngNLP/src/component/result/result.dart';
-import 'package:StanfordAngNLP/src/component/component.dart';
+import 'package:StanfordAngNLP/src/component/errorcard/errorcard.dart';
 
 
 
@@ -33,8 +34,8 @@ import 'package:StanfordAngNLP/src/component/component.dart';
     materialNumberInputDirectives,
     MaterialSliderComponent,
     MaterialExpansionPanelAutoDismiss,
-    ControlPanelComponent
 
+    ErrorCardComponent
 
 
   ],
@@ -106,14 +107,13 @@ class HomepageComponent {
 
 
   num wordCount;
-  num contentPercent = 60;
+  num contentPercent = 50;
 
   num confirmedWordCount;
-  num confirmedContentPercent = 30;
+  num confirmedContentPercent = 50;
 
 
-  //control panel components
-  bool confirmedSubmit = false;
+
 
 
 }

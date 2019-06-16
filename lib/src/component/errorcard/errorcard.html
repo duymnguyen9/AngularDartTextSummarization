@@ -1,0 +1,12 @@
+<skawa-card id="error-card" >
+    <skawa-card-header id="error-card-message-header">
+        <div id="error-card-icon-div">
+            <material-icon id="error-message-icon" icon="clear"></material-icon>
+        </div>
+        <div id="error-card-text-content">
+            <skawa-header-title id="error-message-title">Submit Failed !</skawa-header-title>
+            <skawa-header-subhead id="error-message-sub" *ngIf="errorMessageCode==1">Input text is expected to have at least 10 sentences.</skawa-header-subhead>
+            <skawa-header-subhead id="error-message-sub" *ngIf="errorMessageCode==0">Input Text is empty, please resolves this issues.</skawa-header-subhead>
+        </div>
+    </skawa-card-header>
+</skawa-card>

@@ -4,7 +4,10 @@ import 'package:skawa_material_components/card/card.dart';
 
 import 'package:StanfordAngNLP/src/service/text_result.dart';
 import 'package:StanfordAngNLP/src/service/text_result_service.dart';
-import 'package:StanfordAngNLP/src/component/component.dart';
+import 'package:angular_components/material_chips/material_chip.dart';
+import 'package:angular_components/material_chips/material_chips.dart';
+import 'package:StanfordAngNLP/src/component/errorcard/errorcard.dart';
+
 
 
 
@@ -32,11 +35,9 @@ import 'package:StanfordAngNLP/src/component/component.dart';
     SkawaCardComponent,
     materialNumberInputDirectives,
     MaterialSliderComponent,
-    ControlPanelComponent
 
 
-
-
+    ErrorCardComponent
 
   ],
   providers:  [materialProviders, ClassProvider(TextResultService)],
@@ -69,7 +70,7 @@ class ResultComponent{
     List<Chip> _listOfChips = [];
     for (var i in textResult.keywords){
       _listOfChips.add(Chip(i));
-  }
+    }
     return _listOfChips;
   }
 
@@ -111,15 +112,12 @@ class ResultComponent{
     isLoading = true;
     textResult = await _textResultService.createPost('http://127.0.0.1:5000/textsubmit', editText, confirmedWordCount, confirmedContentPercent);
     originalText = editText;
+    print(editText);
     editModeStatus = false;
     isLoading = false;
   }
   num confirmedWordCount;
   num confirmedContentPercent = 50;
-
-  //control panel components
-  bool confirmedSubmit = false;
-
 
 }
 
