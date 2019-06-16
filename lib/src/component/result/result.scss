@@ -45,11 +45,16 @@
 
   .header-requestContent{
     font-size: $mat-font-size-headline;
-    font-weight: $mat-font-weight-regular;
+    font-weight: 600;
     margin-bottom: 1%;
   }
   .header-requestContent.invalid{
     color: $mat-red;
+  }
+
+  .header-requestContent-result{
+    font-size: $mat-font-size-headline;
+    font-weight: 600;
   }
 
 
@@ -324,4 +329,36 @@
     @include mat-font-title();
     margin-bottom: 10px;
   }
+  .expansion-customization-panel{
+    @include expansionpanel-header-min-height(80px, 80px);
+  }
+
+
+  .loader {
+    height: 10px;
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+    background-color: #ddd;
+  }
+  .loader:before{
+    display: block;
+    position: absolute;
+    content: "";
+    left: -200px;
+    width: 200px;
+    height: 10px;
+    background-color: #8c1515;
+    animation: loading 2s linear infinite;
+  }
+
+  @keyframes loading {
+    from {left: -200px; width: 30%;}
+    50% {width: 30%;}
+    70% {width: 70%;}
+    80% { left: 50%;}
+    95% {left: 120%;}
+    to {left: 100%;}
+  }
+
 }

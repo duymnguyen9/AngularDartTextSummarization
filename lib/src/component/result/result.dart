@@ -110,14 +110,19 @@ class ResultComponent{
   Future<void> getResult() async{
     isCustomToolBeltPanelExpanded = false;
     isLoading = true;
+    isCustomToolBeltPanelResultExpanded=false;
     textResult = await _textResultService.createPost('http://127.0.0.1:5000/textsubmit', editText, confirmedWordCount, confirmedContentPercent);
     originalText = editText;
     print(editText);
     editModeStatus = false;
     isLoading = false;
+    isCustomToolBeltPanelResultExpanded=true;
   }
   num confirmedWordCount;
   num confirmedContentPercent = 50;
+
+  bool isCustomToolBeltPanelResultExpanded=true;
+
 
 }
 

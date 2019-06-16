@@ -56,47 +56,58 @@
 
 
         </material-expansionpanel>
+
+
+
+        <material-expansionpanel class = "expansion-customization-panel"
+                                 wide
+                                 [showSaveCancel]="false"
+                                 value="All conversions"
+                                 [expanded]="isCustomToolBeltPanelEssayExpanded"
+                                 (expandedChange)="isCustomToolBeltPanelEssayExpanded = $event">
+            <div name >
+                <p class = "header-requestContent" *ngIf="isCustomToolBeltPanelEssayExpanded">Essay Analysis</p>
+                <p class = "header-requestContent" *ngIf="isCustomToolBeltPanelEssayExpanded==false">
+                    Essay Analysis:
+                </p>
+
+            </div>
+
+            <div class = "panel-content" *ngIf="isResult == false && isLoading == false">
+                    <material-input class="card-input-size darkgrey nounderline"
+                                    multiline
+                                    rows="10"
+                                    type="text"
+                                    label="Please Input Text Here, Essay is expected to have at least 10 sentences."
+                                    blurUpdate [(ngModel)]="boundText">
+                    </material-input>
+            </div>
+            <div toolbelt>
+                <material-button class="color--primary-reset" (click)="clearText">
+                    <material-icon class="icon-format" icon="refresh"></material-icon>
+                    Clear
+                </material-button>
+                <material-button class="color--primary-action" (click)="submitText">
+                    <material-icon class="icon-format" icon="check" ></material-icon>
+                    Submit
+                </material-button>
+            </div>
+
+
+        </material-expansionpanel>
+
     </material-expansionpanel-set>
 
-    <skawa-card id="card-input-main" [ngClass]="{'invalid': errorMessage}">
-        <skawa-card-header statusColor="rgb(140,21,21)" id="card-input-header">
-            <skawa-header-title>Essay Analysis: </skawa-header-title>
-        </skawa-card-header>
-
-        <skawa-card-content>
-            <div class="lds-css ng-scope" *ngIf="isLoading">
-                <div style="width:100%;height:100%" class="lds-dual-ring">
-                    <div></div>
-                </div>
-            </div>
-        </skawa-card-content>
-
-        <skawa-card-content *ngIf="isResult == false && isLoading == false">
-            <material-input class="card-input-size darkgrey nounderline"
-                            multiline
-                            rows="10"
-                            type="text"
-                            label="Please Input Text Here, Essay is expected to have at least 10 sentences."
-                            blurUpdate [(ngModel)]="boundText">
-            </material-input>
-        </skawa-card-content>
-        <skawa-card-actions align-right id="card-input-actions" *ngIf="isResult == false && isLoading == false">
-            <material-button class="color--primary-reset" (click)="clearText">
-                <material-icon class="icon-format" icon="refresh"></material-icon>
-                Clear
-            </material-button>
-            <material-button class="color--primary-action" (click)="submitText">
-                <material-icon class="icon-format" icon="check" ></material-icon>
-                Submit
-            </material-button>
-        </skawa-card-actions>
-    </skawa-card>
 
 </section>
 
 <section *ngIf="errorMessage">
     <error-card [errorMessageCode]="errorMessageCode"></error-card>
 </section>
-
+<div class="lds-css ng-scope" *ngIf="isLoading">
+    <div style="width:100%;height:100%" class="lds-dual-ring">
+        <div></div>
+    </div>
+</div>
 
 <result-page *ngIf="isResult" [textResult] = "textResult" [originalText] = "boundText" [wordCount]="confirmedWordCount" [contentPercent]="confirmedContentPercent"></result-page>

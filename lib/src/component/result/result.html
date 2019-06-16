@@ -72,42 +72,46 @@
         </material-expansionpanel>
 
 
+
+        <material-expansionpanel class = "expansion-customization-panel"
+                                 wide
+                                 [showSaveCancel]="false"
+                                 value="All conversions"
+                                 [expanded]="isCustomToolBeltPanelResultExpanded"
+                                 (expandedChange)="isCustomToolBeltPanelResultExpanded = $event">
+            <div name >
+                <p class = "header-requestContent-result" >Result</p>
+
+            </div>
+            <div value>
+                <div class="loader" *ngIf="isLoading"></div>
+            </div>
+
+            <div>
+                <p class="result-card-text">{{textResult.summary}}</p>
+
+                <hr>
+
+                <section>
+                    <p class="chip-header">Keywords: </p>
+                    <material-chips class="clickable">
+                        <material-chip *ngFor="let c of listOfChips()"
+                                       [removable]="false"
+                                       [value]="c"
+                                       displayNameRenderer></material-chip>
+
+                    </material-chips>
+                </section>
+            </div>
+
+        </material-expansionpanel>
+
+
+
     </material-expansionpanel-set>
 
 </section>
 
 <section *ngIf="errorMessage">
     <error-card [errorMessageCode]="errorMessageCode"></error-card>
-</section>
-
-
-<section>
-    <skawa-card>
-        <skawa-card-header statusColor="rgb(0,152,219)">
-            <skawa-header-title>Result: </skawa-header-title>
-        </skawa-card-header>
-        <skawa-card-content *ngIf="isLoading==false">
-            <p class="result-card-text">{{textResult.summary}}</p>
-
-            <hr>
-
-            <section>
-                <p class="chip-header">Keywords: </p>
-                <material-chips class="clickable">
-                    <material-chip *ngFor="let c of listOfChips()"
-                                   [removable]="false"
-                                   [value]="c"
-                                   displayNameRenderer></material-chip>
-
-                </material-chips>
-            </section>
-        </skawa-card-content>
-        <skawa-card-content *ngIf="isLoading">
-            <section>
-                <div class="lds-css ng-scope"><div style="width:100%;height:100%" class="lds-rolling"><div></div></div></div>
-            </section>
-        </skawa-card-content>
-
-    </skawa-card>
-
 </section>

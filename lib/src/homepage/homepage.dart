@@ -101,6 +101,7 @@ class HomepageComponent {
     }
     confirmedContentPercent = contentPercent;
     isCustomToolBeltPanelExpanded = false;
+    isCustomToolBeltPanelEssayExpanded = false;
   }
 
 
@@ -112,7 +113,7 @@ class HomepageComponent {
   num confirmedWordCount;
   num confirmedContentPercent = 50;
 
-
+  bool isCustomToolBeltPanelEssayExpanded=true;
 
 
 
