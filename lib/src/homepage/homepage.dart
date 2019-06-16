@@ -34,8 +34,9 @@ import 'package:StanfordAngNLP/src/component/errorcard/errorcard.dart';
     materialNumberInputDirectives,
     MaterialSliderComponent,
     MaterialExpansionPanelAutoDismiss,
-
-    ErrorCardComponent
+    ErrorCardComponent,
+    MaterialRadioComponent,
+    MaterialRadioGroupComponent
 
 
   ],
@@ -80,11 +81,16 @@ class HomepageComponent {
 
 
   Future<void> getResult() async{
-    confirmedContentPercent??=contentPercent;
-    isLoading = true;
-    textResult = await _textResultService.createPost('http://127.0.0.1:5000/textsubmit', boundText, confirmedWordCount, confirmedContentPercent);
-    isLoading = false;
-    isResult = true;
+    if(wordCountError==false){
+      if(contentPercentCheck == true){
+        confirmedContentPercent??=contentPercent;
+      }
+      isLoading = true;
+      textResult = await _textResultService.createPost('http://127.0.0.1:5000/textsubmit', boundText, confirmedWordCount, confirmedContentPercent);
+      isLoading = false;
+      isResult = true;
+    }
+
   }
 
   void cancelCustomization(){
@@ -96,12 +102,21 @@ class HomepageComponent {
   }
 
   void submitCustomization(){
-    if(wordCount != null){
+    if(wordCountCheck == true && wordCount != null){
       confirmedWordCount = wordCount;
+      isCustomToolBeltPanelExpanded = false;
+      confirmedContentPercent = null;
+
     }
-    confirmedContentPercent = contentPercent;
-    isCustomToolBeltPanelExpanded = false;
-    isCustomToolBeltPanelEssayExpanded = false;
+    else if(wordCountCheck== true && wordCount == null){
+      wordCountError = true;
+    }
+    else if(contentPercentCheck == true){
+      confirmedWordCount = null;
+      confirmedContentPercent = contentPercent;
+      isCustomToolBeltPanelExpanded = false;
+    }
+
   }
 
 
@@ -114,7 +129,10 @@ class HomepageComponent {
   num confirmedContentPercent = 50;
 
   bool isCustomToolBeltPanelEssayExpanded=true;
+  bool wordCountCheck = false;
+  bool contentPercentCheck = true;
 
+  bool wordCountError = false;
 
 
 }

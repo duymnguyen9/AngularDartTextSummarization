@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b6b02e7-2179-4d24-9453-765346c1b1ea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/lib/src/component/result/result.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/component/result/result.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/component/result/result.html" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/component/result/result.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/component/result/result.scss" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/component/result/result.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/homepage/homepage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/homepage/homepage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/homepage/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/homepage/homepage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/homepage/homepage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/homepage/homepage.scss" afterDir="false" />
@@ -23,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/src/homepage/homepage.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="115" column="30" selection-start-line="115" selection-end-line="116" />
+            <state relative-caret-position="194">
+              <caret line="85" column="49" selection-start-line="85" selection-start-column="49" selection-end-line="85" selection-end-column="49" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -38,8 +35,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/src/homepage/homepage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-381">
-              <caret line="61" selection-start-line="61" selection-end-line="96" selection-end-column="34" />
+            <state relative-caret-position="672">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -50,17 +47,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/src/component/result/result.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1097">
-              <caret line="129" column="11" lean-forward="true" selection-start-line="129" selection-start-column="11" selection-end-line="129" selection-end-column="11" />
+            <state relative-caret-position="462">
+              <caret line="103" column="5" lean-forward="true" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/src/component/result/result.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="81" column="23" selection-start-line="81" selection-start-column="23" selection-end-line="81" selection-end-column="23" />
+            <state relative-caret-position="176">
+              <caret line="90" column="57" selection-start-line="90" selection-start-column="57" selection-end-line="90" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/src/service/text_result_service.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="434">
+              <caret line="27" column="44" lean-forward="true" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -68,7 +77,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/src/component/result/result.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="654">
+            <state relative-caret-position="11392">
               <caret line="356" column="21" lean-forward="true" selection-start-line="356" selection-start-column="21" selection-end-line="356" selection-end-column="21" />
             </state>
           </provider>
@@ -77,8 +86,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/src/homepage/homepage.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="310" column="20" lean-forward="true" selection-start-line="310" selection-start-column="20" selection-end-line="310" selection-end-column="20" />
+            <state relative-caret-position="212">
+              <caret line="267" column="26" lean-forward="true" selection-start-line="267" selection-start-column="26" selection-end-line="267" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -96,7 +105,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>isCustomToolBeltPanelExpanded</find>
       <find>custom-request-expansion-panel</find>
       <find>toolbelt</find>
       <find>prima</find>
@@ -126,6 +134,7 @@
       <find>expansion-customization-panel</find>
       <find>header-requestContent-result</find>
       <find>24</find>
+      <find>word-count-div</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -153,19 +162,19 @@
         <option value="$PROJECT_DIR$/lib/app_component.dart" />
         <option value="$PROJECT_DIR$/lib/src/component/controlpanel/controlpanel.dart" />
         <option value="$PROJECT_DIR$/lib/src/component/controlpanel/controlpanel.html" />
-        <option value="$PROJECT_DIR$/lib/src/homepage/homepage.dart" />
-        <option value="$PROJECT_DIR$/lib/src/homepage/homepage.html" />
         <option value="$PROJECT_DIR$/lib/src/component/result/result.dart" />
-        <option value="$PROJECT_DIR$/lib/src/homepage/homepage.scss" />
         <option value="$PROJECT_DIR$/lib/src/component/result/result.scss" />
         <option value="$PROJECT_DIR$/lib/src/component/result/result.html" />
+        <option value="$PROJECT_DIR$/lib/src/homepage/homepage.scss" />
+        <option value="$PROJECT_DIR$/lib/src/homepage/homepage.html" />
+        <option value="$PROJECT_DIR$/lib/src/homepage/homepage.dart" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="953" />
+    <option name="x" value="1108" />
     <option name="y" value="23" />
-    <option name="width" value="1607" />
+    <option name="width" value="1452" />
     <option name="height" value="1417" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -322,11 +331,12 @@
       <workItem from="1560643973769" duration="138000" />
       <workItem from="1560644362586" duration="22000" />
       <workItem from="1560644570675" duration="4102000" />
+      <workItem from="1560654237621" duration="3145000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132017000" />
+    <option name="totallyTimeSpent" value="135162000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -338,10 +348,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="23" width="1607" height="1417" extended-state="0" />
+    <frame x="1108" y="23" width="1452" height="1417" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17150062" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19007687" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -357,7 +367,7 @@
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32925898" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32925898" />
-      <window_info anchor="bottom" id="Dart Webdev" order="13" visible="true" weight="0.20702827" />
+      <window_info active="true" anchor="bottom" id="Dart Webdev" order="13" visible="true" weight="0.20473644" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -503,36 +513,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/src/service/text_result_service.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="25" column="3" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/src/component/controlpanel/controlpanel.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="768">
-          <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/src/component/controlpanel/controlpanel.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/src/component/controlpanel/controlpanel.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="26" column="56" selection-start-line="26" selection-start-column="56" selection-end-line="26" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/component/controlpanel/controlpanel.dart" />
+    <entry file="file://$PROJECT_DIR$/lib/src/component/controlpanel/controlpanel.scss" />
+    <entry file="file://$PROJECT_DIR$/lib/src/component/controlpanel/controlpanel.html" />
     <entry file="file://$PROJECT_DIR$/lib/src/component/errorcard/errorcard.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="512">
@@ -543,51 +526,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/src/homepage/homepage.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="115" column="30" selection-start-line="115" selection-end-line="116" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/src/component/result/result.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1097">
-          <caret line="129" column="11" lean-forward="true" selection-start-line="129" selection-start-column="11" selection-end-line="129" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/src/homepage/homepage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-381">
-          <caret line="61" selection-start-line="61" selection-end-line="96" selection-end-column="34" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/src/homepage/homepage.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="310" column="20" lean-forward="true" selection-start-line="310" selection-start-column="20" selection-end-line="310" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/src/component/result/result.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="654">
+        <state relative-caret-position="11392">
           <caret line="356" column="21" lean-forward="true" selection-start-line="356" selection-start-column="21" selection-end-line="356" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/src/component/result/result.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="81" column="23" selection-start-line="81" selection-start-column="23" selection-end-line="81" selection-end-column="23" />
+        <state relative-caret-position="176">
+          <caret line="90" column="57" selection-start-line="90" selection-start-column="57" selection-end-line="90" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/service/text_result_service.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="27" column="44" lean-forward="true" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/component/result/result.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="103" column="5" lean-forward="true" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/homepage/homepage.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="267" column="26" lean-forward="true" selection-start-line="267" selection-start-column="26" selection-end-line="267" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/homepage/homepage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/homepage/homepage.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="85" column="49" selection-start-line="85" selection-start-column="49" selection-end-line="85" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

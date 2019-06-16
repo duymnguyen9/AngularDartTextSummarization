@@ -21,27 +21,35 @@
             </div>
 
             <div value>
-                <span class="customization-parameter-display" *ngIf="confirmedWordCount != null && isCustomToolBeltPanelExpanded==false"> Word Count: {{confirmedWordCount}}</span>
-                <span class="customization-parameter-display" *ngIf="isCustomToolBeltPanelExpanded==false"> Summary Ratio: {{confirmedContentPercent}}%</span>
+                <span class="customization-parameter-display" *ngIf="confirmedWordCount != null && isCustomToolBeltPanelExpanded==false && wordCountCheck == true"> Word Count: {{confirmedWordCount}}</span>
+                <span class="customization-parameter-display" *ngIf="isCustomToolBeltPanelExpanded==false && contentPercentCheck==true"> Summary Ratio: {{confirmedContentPercent}}%</span>
             </div>
 
             <div class = "panel-content">
-                <div class = "word-count-div">
-                    <p class="word-count-title">Word Count:</p>
-                    <material-input class="darkgrey" type="number" keypressUpdate required [(ngModel)]="wordCount" label="Input word count value">
-                    </material-input>
-                </div>
-                <div class = "content-percent-div">
+                <material-radio-group>
+                    <material-radio [(checked)]="wordCountCheck">
+                        <div class = "word-count-div">
+                            <p class="word-count-title">Word Count:</p>
+                            <material-input class="darkgrey" type="number" keypressUpdate required [(ngModel)]="wordCount" label="Input word count value">
+                            </material-input>
+                        </div>
+                    </material-radio>
 
-                    <p class="word-count-title">Summary Ratio:</p>
-                    <material-slider [(value)]="contentPercent"
-                                     [min]="20"
-                                     [step]="5"
-                                     [max]="75"></material-slider>
+                    <material-radio [(checked)]="contentPercentCheck">
+                        <div class = "content-percent-div">
 
-                    <span class="slider-value">{{contentPercent}}%</span>
+                            <p class="word-count-title">Summary Ratio:</p>
+                            <material-slider [(value)]="contentPercent"
+                                             [min]="20"
+                                             [step]="5"
+                                             [max]="75"></material-slider>
 
-                </div>
+                            <span class="slider-value">{{contentPercent}}%</span>
+
+                        </div>
+                    </material-radio>
+                </material-radio-group>
+
             </div>
             <div toolbelt>
                 <material-button class="color--primary-cancel" (click)="cancelCustomization()">
@@ -93,7 +101,6 @@
                 </material-button>
             </div>
 
-
         </material-expansionpanel>
 
     </material-expansionpanel-set>
@@ -110,4 +117,10 @@
     </div>
 </div>
 
-<result-page *ngIf="isResult" [textResult] = "textResult" [originalText] = "boundText" [wordCount]="confirmedWordCount" [contentPercent]="confirmedContentPercent"></result-page>
+<result-page *ngIf="isResult"
+             [textResult] = "textResult"
+             [originalText] = "boundText"
+             [wordCount]="confirmedWordCount"
+             [contentPercent]="confirmedContentPercent">
+
+</result-page>
